@@ -210,7 +210,7 @@ function hideTextAndChoicesAndShowResult() {
 
 // Funktion för att visa "text" div och "choices" div samt dölja "result" div
 function showTextAndChoicesAndHideResult() {
-  document.getElementById("text").style.display = "block";
+  document.getElementById("text").style.display = "flex";
   document.getElementById("choices").style.display = "flex";
   document.getElementById("result").style.display = "none";
 }

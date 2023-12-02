@@ -1,0 +1,112 @@
+/*---- General Settings ----*/
+
+* {
+    font-family: "Smooch Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+  }
+  
+  body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+  }
+  
+  button {
+    width: 120px;
+    padding: 10px 0px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    background-color: rgb(0, 174, 255);
+    color: black;
+    transition: 0.25s ease-in-out;
+  }
+  
+  button:hover {
+    scale: 1.05;
+    background-color: rgb(0, 155, 226);
+  }
+  
+  /*---- Start Menu ----*/
+  
+  #wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+  }
+  
+  div {
+    animation: fadeIn 2s forwards;
+  }
+  
+  #gameTitle {
+    position: relative;
+    bottom: 70px;
+    font-size: 2.2rem;
+    color: white;
+    padding: 10px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #user {
+    padding: 10px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  #user input {
+    color: black;
+    padding: 3px;
+    text-align: center;
+  }
+  
+  #user p {
+    animation: blink 1s infinite;
+  }
+  
+  #buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+
+  
+  /*---- Animations ----*/
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0%;
+    }
+  
+    100% {
+      opacity: 100%;
+    }
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+  

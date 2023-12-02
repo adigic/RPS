@@ -26,7 +26,7 @@ function gameStarted() {
   createButton("paper", "paperButton");
   createButton("scissor", "scissorButton");
 
-  // Koppla knapparna till spelomgången
+  // Eventlyssnare för användarens val som sedan skickas in i funktionen "playRound"
   document.getElementById("rockButton").addEventListener("click", function () {
     playRound("rock");
   });

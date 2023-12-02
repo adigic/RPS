@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPS by ADIGIC</title>
+    <link rel="stylesheet" href="../CSS/styles.css" />
+    <script src="../JavaScript/script.js" defer></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <!-- Wrapper för spelet -->
+      <div id="wrapper">
+        <h1 id="gameTitle">Welcome to Rock Paper Scissors!</h1>
+
+        <!-- Här är ett formulär för att hämta användarnamn -->
+        <div id="user">
+          <form>
+            <label for="username">choose your username</label>
+            <input type="username" id="username" />
+          </form>
+        </div>
+
+        <!-- Här kommer text element skapas vid start av spel -->
+        <div id="text"></div>
+
+        <!-- Startknapp -->
+        <div id="buttons">
+          <button id="startButton" onclick="startGame()">Start Game</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

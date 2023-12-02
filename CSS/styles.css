@@ -96,7 +96,8 @@ form {
 }
 
 #text h1 {
-  padding-bottom: 80px;
+  position: relative;
+  bottom: 70px;
   font-size: 2.5rem;
 }
 

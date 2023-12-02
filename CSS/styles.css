@@ -107,6 +107,22 @@ form {
   text-align: center;
 }
 
+i {
+  animation: spin 0.5s forwards;
+}
+
+#back {
+  margin-top: 25px;
+}
+
+#score p {
+  margin-top: 30px;
+}
+
+#result :nth-child(1) {
+  font-size: 2rem;
+}
+
 /*---- Animations ----*/
 
 @keyframes fadeIn {
@@ -125,5 +141,42 @@ form {
   }
   100% {
     opacity: 100%;
+  }
+}
+
+@keyframes spin {
+  0% {
+    font-size: 0rem;
+    transform: rotate(0deg);
+  }
+  100% {
+    font-size: 8rem;
+    transform: rotate(360deg);
+  }
+}
+
+/*----- MEDIA QUERIES -----*/
+
+@media screen and (max-width: 768px) {
+  button {
+    width: 200px;
+  }
+
+  #choices {
+    flex-direction: column;
+  }
+
+  #text h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #gameTitle {
+    font-size: 1.8rem;
+  }
+
+  button {
+    width: 200px;
   }
 }

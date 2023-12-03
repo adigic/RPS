@@ -35,9 +35,11 @@ function gameStarted() {
     playRound("paper");
   });
 
-  document.getElementById("scissorButton").addEventListener("click", function () {
-    playRound("scissors");
-  });
+  document
+    .getElementById("scissorButton")
+    .addEventListener("click", function () {
+      playRound("scissors");
+    });
 }
 
 function createButton(text, id) {
@@ -91,7 +93,7 @@ function playRound(userChoice) {
   // Visa ikonen i 2 sekunder och dölj den sedan
   setTimeout(function () {
     icon.style.display = "none";
-    showResultText(resultDisplay, result);
+    showResultText(resultDisplay, result, userChoice, computerChoice);
 
     // Skapa tillbaka-knapp i "backDiv"
     backDiv.appendChild(backButton);
@@ -161,16 +163,28 @@ function removeScore() {
 }
 
 // Funktion för att visa resultattexten
-function showResultText(resultDiv, result) {
+function showResultText(resultDiv, result, userChoice, computerChoice) {
   // Skapa nytt <p> element för resultat texten
   var resultTextElement = document.createElement("p");
   resultTextElement.textContent = determineWinnerText(result);
 
+  // Skapa en <div> för användarvalet och datorvalet
+  var choiceResultsDiv = document.createElement("div");
+  choiceResultsDiv.id = "resultChoices"; // Sätt ID "resultChoices"
+
+  // Skapa ett <p> element för användarvalet
+  var resultChoiceElement = document.createElement("p");
+  resultChoiceElement.textContent = `You chose ${userChoice}, the Computer chose ${computerChoice}`;
+
+  // Lägg till de nya <p> elementen i choiceResultsDiv
+  choiceResultsDiv.appendChild(resultChoiceElement);
+
   // Rensa innehåll i resultDiv
   resultDiv.innerHTML = "";
 
-  // Skapa nytt <p> element i resultDiv
+  // Lägg till resultattexten och choiceResultsDiv i resultDiv
   resultDiv.appendChild(resultTextElement);
+  resultDiv.appendChild(choiceResultsDiv);
 
   // Hämta färgen baserat på resultatet
   var color = getResultColor(result);
@@ -179,7 +193,7 @@ function showResultText(resultDiv, result) {
 
 // Funktion för att välja texten som ska visas beroende på resultatet
 function determineWinnerText(result) {
-  updateScore(); // Update and display the score
+  updateScore();
 
   if (result === "WIN") {
     return "You Win!";

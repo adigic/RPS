@@ -35,6 +35,31 @@ button:hover {
   background-color: rgb(0, 155, 226);
 }
 
+/*---- Navbar ----*/
+
+nav {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 5px;
+}
+
+nav i {
+  font-size: 2rem;
+}
+
+nav i:hover {
+  scale: 1.1;
+  color: rgb(0, 174, 255);
+}
+
 /*---- Start Menu ----*/
 
 #wrapper {
@@ -89,7 +114,7 @@ form {
 
 /*---- Game Menu ----*/
 
-#text{
+#text {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,7 +152,16 @@ i {
   margin-top: 30px;
 }
 
-#result :nth-child(1) {
+
+#resultChoices p {
+  font-size: 1rem !important;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px;
+}
+
+#result p {
   font-size: 2rem;
 }
 
@@ -188,7 +222,17 @@ i {
     font-size: 1.5rem;
   }
 
+  #resultChoices p {
+    font-size: 0.8rem !important;
+  }
+
   button {
     width: 200px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #resultChoices p {
+    font-size: 0.7rem !important;
   }
 }

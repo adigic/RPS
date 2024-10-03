@@ -1,4 +1,4 @@
-# JS1 ➜ Inlämningsuppgift 2
+# RPS
 
 
 
